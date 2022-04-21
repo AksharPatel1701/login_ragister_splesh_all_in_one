@@ -14,8 +14,9 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         var image=imageView
         var fadeIn=AnimationUtils.loadAnimation(applicationContext,R.anim.fade_in)
-       // fadeIn.setAnimationListener(this);
+        var roted=AnimationUtils.loadAnimation(applicationContext,R.anim.roted)
         image.startAnimation(fadeIn);
+        image.startAnimation(roted)
 
 
         Handler().postDelayed(Runnable {
