@@ -4,10 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.widget.EditText
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    var flage=false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,14 +34,21 @@ class MainActivity : AppCompatActivity() {
 
                         var preference = getSharedPreferences("MyPref", MODE_PRIVATE)
                         var editor = preference.edit()
-                        editor.putString("user", username)
+                        editor.putString("UserName", username)
                         editor.commit()
-
-                        var intent = Intent(applicationContext, Signup::class.java)
+                        var intent = Intent(applicationContext, WelcomeActivity::class.java)
                         startActivity(intent)
                         finish()
+                        flage=true
+                        break
+
                     }
 
+
+                }
+                if (flage==false)
+                {
+                    Toast.makeText(this,"invalid username password",Toast.LENGTH_SHORT).show()
                 }
                
             }
@@ -47,4 +56,8 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
+
+
 }

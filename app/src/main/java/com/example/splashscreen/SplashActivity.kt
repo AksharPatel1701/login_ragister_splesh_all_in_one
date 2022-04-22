@@ -1,6 +1,7 @@
 package com.example.splashscreen
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -17,16 +18,23 @@ class SplashActivity : AppCompatActivity() {
         var roted=AnimationUtils.loadAnimation(applicationContext,R.anim.roted)
         image.startAnimation(fadeIn);
         image.startAnimation(roted)
+        var sp : SharedPreferences = getSharedPreferences("MyPref", MODE_PRIVATE)
+        var st = sp.getString("UserName","")
 
-
-        Handler().postDelayed(Runnable {
-
-
-                var intent = Intent(applicationContext, MainActivity::class.java)
+        Handler().postDelayed({
+            if(st.equals(""))
+            {
+                var intent = Intent(this,MainActivity::class.java)
                 startActivity(intent)
-
-            finish()
-        },8000)
+                finish()
+            }
+            else
+            {
+                var intent = Intent(this,WelcomeActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        },5000)
     }
 
 }

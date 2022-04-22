@@ -4,8 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Signup"
+    tools:context=".WelcomeActivity"
     android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtgreet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        android:layout_gravity="center"/>
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="409dp"
         android:layout_height="wrap_content"
@@ -14,42 +29,24 @@
         android:padding="20dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/supnamme"
+            android:id="@+id/wlcbikename"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Name:" />
     </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="117dp"
         android:padding="20dp"
         >
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/supusername"
+            android:id="@+id/wlcbikedsc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter user name"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="117dp"
-        android:padding="20dp"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/suppassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter pasword"
-            android:inputType="textPassword"
-            />
+            android:hint="Enter description:" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="409dp"
@@ -59,34 +56,60 @@
         android:padding="20dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/supemail"
+            android:id="@+id/wlcbikeprice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter email:" />
+            android:hint="Enter Price:" />
     </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="117dp"
-        android:padding="20dp"
-        >
+        android:padding="20dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/supphone"
+            android:id="@+id/wlcbikestecap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter mobile number"
-            />
+            android:hint="Enter seting cap:" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp"
+        android:padding="20dp">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/wlcfullcap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Full cap :" />
     </com.google.android.material.textfield.TextInputLayout>
     <Button
-        android:id="@+id/supsave"
+        android:id="@+id/wlcsave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="save"
+        android:text="insart"
         app:cornerRadius="20dp"
-        android:layout_margin="15dp"/>
+        android:layout_margin="7dp"/>
+    <Button
+        android:id="@+id/wlcviewmul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="view"
+        app:cornerRadius="20dp"
+        android:layout_margin="7dp"/>
+    <Button
+        android:id="@+id/wlcview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="view recycle"
+        app:cornerRadius="20dp"
+        android:layout_margin="7dp"/>
+
+
+
 
 </LinearLayout>

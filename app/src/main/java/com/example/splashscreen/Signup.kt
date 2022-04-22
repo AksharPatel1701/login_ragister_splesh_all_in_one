@@ -1,5 +1,6 @@
 package com.example.splashscreen
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -18,6 +19,9 @@ class Signup : AppCompatActivity() {
             var s1=Sup(name,username,pass,email,no)
             var db=DBHelper(this)
             var falg=db.insert(s1)
+            var intent = Intent(this,WelcomeActivity::class.java)
+            startActivity(intent)
+            finish()
             if(falg)
             {
                 Toast.makeText(this,"record inerted", Toast.LENGTH_LONG).show()
