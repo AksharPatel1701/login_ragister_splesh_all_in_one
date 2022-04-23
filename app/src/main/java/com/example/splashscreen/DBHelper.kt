@@ -185,5 +185,21 @@ class DBHelper (var context: Context): SQLiteOpenHelper(context, DB_NAME,null, D
             null)
         db.close()
     }
+    fun bike_opretion():ArrayList<Bike_opration>
+    {
+        var arr=ArrayList<Bike_opration>()
+        var db=readableDatabase
+        var cursor=db.query(TABLE_NAME,null,null,null,null,null,null)
+        while(cursor.moveToNext())
+        {
+
+            var id=cursor.getInt(0)
+            var price=cursor.getInt(3)
+            var p=Bike_opration(id,price)
+            arr.add(p)
+        }
+        return arr
+
+    }
 
 }

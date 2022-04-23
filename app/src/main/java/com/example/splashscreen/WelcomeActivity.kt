@@ -36,6 +36,10 @@ class WelcomeActivity : AppCompatActivity() {
             var intent= Intent(this,ViewAllActivity::class.java)
             startActivity(intent)
         }
+        wlcviewmul.setOnClickListener {
+            var intent= Intent(this,OpreationActivity::class.java)
+            startActivity(intent)
+        }
 
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

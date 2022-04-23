@@ -11,3 +11,4 @@ data class Bike (var bike_name:String,var bike_desc:String,var bike_price:Int,va
 
 }
 data class Bike_updeta(var bid:Int,var bname:String,var bdesc:String)
+data class Bike_opration(var opid:Int,var opprice:Int)
